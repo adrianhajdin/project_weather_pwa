@@ -1,5 +1,5 @@
 # Weather Progressive Web Application
-![Weather Data](https://i.ibb.co/mtd7tbB/Arcanetworks.png)
+![Weather Data](https://i.imgur.com/3csowzj.png)
 
 ### [Live Site](https://inspiring-bhaskara-d21f88.netlify.app)
 
