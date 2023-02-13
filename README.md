@@ -9,5 +9,6 @@ C'est une version dite 'béta' afin de tester la PWA sous forme de React
 
 
 ## Crédits
-|| Nom || GitHub||
-|| Maxence Lebrun || ![@MaxenceLebrunDEV](https://github.com/MaxenceLebrunDEV) ||
+| Nom     | Prénom      | Nom d'utilisateur GitHub     |
+| ------------- | ------------- | -------- |
+| Lebrun          | Maxence         | [@MaxenceLebrunDEV](https://github.com/MaxenceLebrunDEV)  |
