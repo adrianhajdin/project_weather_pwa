@@ -1,26 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="./images/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Modern PWA Weather React Application" />
-    <link rel="apple-touch-icon" href="./images/logo.png" />
-    <link rel="manifest" href="./manifest.json" />
-    <title>Weather App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <script>
-        if('serviceWorker' in navigator) {
+<html>
+<head>
+  <!-- 2ème Easter EGG -->
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>MesManuels&Moi</title>
+    <link rel="icon" type="image/png" href="./assets/img/logo.png" />
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="apple-touch-icon" href="./assets/img/1024x1024.png">
+<link rel="apple-touch-icon" sizes="152x152" href="./assets/img/1024x1024.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./assets/img/1024x1024.png">
+<link rel="apple-touch-icon" sizes="167x167" href="./assets/img/1024x1024.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="MesManuels&Moi">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>  
+    <meta name=
+    "apple-mobile-web-app-status-bar"
+          content="#aa7700">
+    <meta name="theme-color"
+          content="black">
+   
+    <!-- Manifest File link -->
+    <link rel="manifest"
+          href="manifest.json">
+</head>
+<body>
+  <div class="navbar" style="left: 0px; padding-bottom: 2px;">
+    <a href="https://lyceeconnecte.fr" target="_blank">
+    <img src="./assets/img/na.png" style="width: 200px;" alt="" srcset=""></a>
+    <br>
+  </div>
+  <div class="main">
+    <center>
+        <h5>Ceci est un des 3 easters-eggs🐰 Indice: code </h5> <br>
+        <h2>Mes Manuels & Moi:<br></h2>
+        <br>
+        <h3 class="info" id="uainfo"> </h3>
+        <h3><a target="_blank"  id="ua"> Accès</a>
+          <br>
+          <div id="tuto">
+
+          </div>
+        </h3>
+        <br>
+
+
+        <a href="mentionslegales.pdf">Mentions Légales & Politique de confidentialité</a>
+
+    </center>
+  </div>
+  <script>
+     if('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('./serviceworker.js')
                     .then((reg) => console.log('Success: ', reg.scope))
                     .catch((err) => console.log('Failure: ', err));
             })
         }
-    </script>
-  </body>
+    const ua = navigator.userAgent
+    
+    if (/android/i.test(ua)) {
+      document.getElementById("ua").innerHTML = "Installation sur Android"; 
+      document.getElementById("tuto").innerHTML = '<br><iframe width="300" height="600" src="https://www.youtube.com/embed/eEDcqIyQRPg" title="Installation de l application sur Android | MesManuels&Moi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+       }
+    else if (/iPad|iPhone|iPod/.test(ua)){
+    document.getElementById("ua").innerHTML = "Installation sur iOS";
+     document.getElementById("tuto").innerHTML = '<br><iframe width="300" height="600" src="https://www.youtube.com/embed/xTGZvByRDeI" title="Installation de MesManuels&Moi sur iOS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+        }else{
+
+    document.getElementById("ua").innerHTML = "Accès aux manuels";
+    
+    document.getElementById("uainfo").innerHTML = "Malheurement vu que l'application pour PC n'existe pas encore, vous allez être redirigé vers une page web vous permettant d'utiliser tout de même l'application.";
+       $("a").attr("href", "https://mesmanuelsetmoi.tech/pwa.html");
+  }
+    /**
+    if (/android/i.test(ua)) {
+    document.getElementById("app").innerHTML = "Installation sur Android";
+    }
+    else if (/iPad|iPhone|iPod/.test(ua)){
+      
+    document.getElementById("app").innerHTML = "Installation sur iOS";
+      document.getElementById("app").setAttribute ("href", "ios.mp4");
+    }else{
+      document.getElementById("app").innerHTML = "Accès PC";
+      document.getElementById("app").setAttribute ("href", "pwa.html");}
+  
+  
+**/
+  </script>
+</body>
 </html>

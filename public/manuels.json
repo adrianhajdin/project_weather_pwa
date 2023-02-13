@@ -1,0 +1,83 @@
+{
+    "1":[
+        {
+            "classe":"0",
+            "manuels":[{
+                "name": "Manuels Terminal SVT",
+                "image": "https://m.media-amazon.com/images/I/41VXydt3LTL._SX373_BO1,204,203,200_.jpg",
+                "link": "https://fr.calameo.com/read/003221622eefc25446ca1?authid=ET25eWK4SsOt"
+                }]
+        },
+        {
+            "classe":"1",
+            "manuels":[{
+                "name": "Manuels 1ère SVT",
+                "image": "https://m.media-amazon.com/images/I/41VXydt3LTL._SX373_BO1,204,203,200_.jpg",
+                "link": "https://fr.calameo.com/read/003221622eefc25446ca1?authid=ET25eWK4SsOt"
+                }]
+        },
+        { "classe" : "2",
+          "manuels": [
+            {
+            "name": "Manuels 2de Histoire",
+            "image": "https://www.editions-hatier.fr/sites/default/files/styles/livre_couverture_node_view/public/couvertures/couverture_6407564.jpg?itok=qQK97Tk_",
+            "link": "https://mesmanuels.fr/acces-libre/6342779"
+            },
+            {
+            "name": "Manuels 2de Géographie",
+            "image": "https://m.media-amazon.com/images/I/51Zvn0mHv-L._SX218_BO1,204,203,200_QL40_ML2_.jpg",
+            "link": "https://demo.educadhoc.fr/reader/textbook/9782401058835/fxl?feature=freemium"
+            },
+            {
+            "name": "Manuels 2de Français",
+            "image": "https://esprit-et-lettre-francais-lycee.nathan.fr/wp-content/uploads/2019/05/couv-2de.jpg",
+            "link": "https://biblio.nathan.fr/specimen/9782091653020/?openBook=9782091653020%3fdXNlck5hbWU9cGQ1ZHZhT1c2VnR1cTQyWkNBL1hqUT09JnVzZXJQYXNzd29yZD1XalB3YkZzdmZ2RmNDSHNXUmgyemt3PT0mZGVtbz10cnVlJndhdGVybWFyaz10cnVl"
+            },
+            {
+            "name": " Manuels 2de Anglais",
+            "image": "https://i.calameoassets.com/190409134331-2927ca204b2384e2a7c515f83b1e4987/large.jpg",
+            "link": "https://fr.calameo.com/read/0048229533de43dd90e74"
+            },
+            {
+            "name": "Manuels 2de SES",
+            "image": "https://th.bing.com/th/id/OIP.AkiWMxiKEj8h8Y3jJrnnVQHaKZ?pid=ImgDet&rs=1",
+            "link": "https://idp-auth.gar.education.fr/domaineGar?idENT=QjA=&idEtab=MDQwMDAxN0I=&idRessource=ark%3A%2F21889%2Fn13_9782047391495"
+            },
+            {
+            "name": "Manuels 2de Physique-Chimie",
+            "image": "https://th.bing.com/th/id/OIP.6ZeeX-0tP5V7dMUYdyxpqAHaKb?pid=ImgDet&rs=1",
+            "link": "https://idp-auth.gar.education.fr/domaineGar?idENT=QjA=&idEtab=MDQwMDAxN0I=&idRessource=ark%3A%2F21889%2Fn13_9782047391532"
+            },
+            {
+            "name": "Manuels 2de Mathématiques",
+            "image": "https://www.enseignants.hachette-education.com/sites/default/files/styles/couv_livre/public/images/livres/couv/9782013954778-001-T.jpeg?itok=0Moe55J3",
+            "link": "https://idp-auth.gar.education.fr/domaineGar?idENT=QjA=&idEtab=MDQwMDAxN0I=&idRessource=ark%3A%2F12313%2FHE9782017104254"
+            },
+            {
+            "name": "Manuels 2de Espagnol",
+            "image": "https://th.bing.com/th/id/OIP.30aPwltWgXkNEJGaKAtUhwAAAA?w=123&h=180&c=7&r=0&o=5&pid=1.7",
+            "link": "https://fr.calameo.com/read/00322162222fd58c29b4d?authid=oGHryZq81UXE"
+            },
+            {
+            "name": "Manuels 2de SVT",
+            "image": "https://m.media-amazon.com/images/I/41VXydt3LTL._SX373_BO1,204,203,200_.jpg",
+            "link": "https://fr.calameo.com/read/003221622eefc25446ca1?authid=ET25eWK4SsOt"
+            }
+            ]
+            }
+    ],
+    "2":[
+        {
+            "classe":"2",
+            "manuels":[]
+        },
+        {
+            "classe":"1",
+            "manuels":[]
+        },
+        {
+            "classe":"0",
+            "manuels":[]
+        }
+    ]
+}

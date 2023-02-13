@@ -1,15 +1,20 @@
 {
-    "short_name": "Weather App",
-    "name": "Weather App PWA",
-    "icons": [
-        {
-            "src": "/images/logo.png",
-            "type": "image/png",
-            "sizes": "1024x1024"
-        }
+    "name":"MesManuels&Moi",
+    "short_name":"MesManuels&Moi",
+    "start_url":"index.html",
+    "display":"standalone",
+    "background_color":"#e20037",
+    "theme_color":"black",
+    "scope": ".",
+    "categories": [
+      "education"
     ],
-    "start_url": ".",
-    "display": "standalone",
-    "theme_color": "#000000",
-    "background_color": "#ffffff"
-}
+    "description":"Tous vos manuels dans votre poche ;)",
+    "icons":[
+    {
+    "src":"./1024x1024.png",                     
+    "sizes":"1024x1024",
+    "type":"image/png"
+    }
+  ]
+  }

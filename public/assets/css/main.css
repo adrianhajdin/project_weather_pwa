@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');      
+
+body {
+  background-color: #f0f0f0;
+  color: rgb(0, 0, 0);
+  font-family: 'Roboto', sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  background-color: rgb(252, 77, 77);
+  padding: 10px;
+  left: 0px;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+.grid-item:hover {
+  background-color: rgb(252, 122, 122);
+}
+
+.grid-item a {
+  color: rgb(255, 255, 255);
+}
+
+.grid-item {
+  background-color: rgb(255, 102, 102);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: auto; 
+  }
+        
+  .navbar {
+    overflow: hidden;
+    background-color: #e20037;
+    position: fixed;
+    top: 0; 
+    left: 0px; 
+  }      
+}
+
+.navbar {
+  
+  overflow: hidden;
+  background-color: #e20037;
+  position: fixed;
+  top: 0; 
+  left: 0px; 
+  width: 100%;
+}
+      
+.navbar-plus{
+  float: right;
+  display: block;
+  text-underline-offset: 0;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 24px;
+}
+.info {
+color: rgb(70, 70, 70);
+}
