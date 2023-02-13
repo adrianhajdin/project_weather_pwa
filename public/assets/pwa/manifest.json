@@ -12,7 +12,7 @@
     "description":"Tous vos manuels dans votre poche ;)",
     "icons":[
     {
-    "src":"./1024x1024.png",                     
+    "src":"assets/img/1024x1024.png",                     
     "sizes":"1024x1024",
     "type":"image/png"
     }
