@@ -1,94 +1,204 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <!-- 2ème Easter EGG -->
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>MesManuels&Moi</title>
+
+    <!-- Encodage -->
+    <meta charset='utf-8'>
+
+    <!-- Compatibility -->
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- ASSETS -->
     <link rel="icon" type="image/png" href="./assets/img/logo.png" />
     <link rel="stylesheet" href="./assets/css/main.css">
+
+    <!-- PWA -->
+    <link rel="manifest" href="assets/pwa/manifest.json">
     <link rel="apple-touch-icon" href="./assets/img/1024x1024.png">
-<link rel="apple-touch-icon" sizes="152x152" href="./assets/img/1024x1024.png">
-<link rel="apple-touch-icon" sizes="180x180" href="./assets/img/1024x1024.png">
-<link rel="apple-touch-icon" sizes="167x167" href="./assets/img/1024x1024.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/img/1024x1024.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/1024x1024.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="./assets/img/1024x1024.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="MesManuels&Moi">
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>  
-    <meta name=
-    "apple-mobile-web-app-status-bar"
-          content="#aa7700">
-    <meta name="theme-color"
-          content="black">
-   
-    <!-- Manifest File link -->
-    <link rel="manifest"
-          href="manifest.json">
+    <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
+
+    <!-- JQUERY -->
+    <script src="assets/js/jquery.js"></script>
 </head>
 <body>
-  <div class="navbar" style="left: 0px; padding-bottom: 2px;">
-    <a href="https://lyceeconnecte.fr" target="_blank">
-    <img src="./assets/img/na.png" style="width: 200px;" alt="" srcset=""></a>
+    
+    
+    <header>
+        <a href="https://lyceeconnecte.fr" target="_blank">
+        <img src="./assets/img/na.png" style="
+        width: 200px;
+    " alt="" srcset=""></a>
+    <div class="navbar-plus">
+        <a href="https://notionforms.io/forms/ajouter-un-manuel" style="
+        color: #f2f2f2;" target="_blank">
+            <i class="fas fa-plus"></i></a></div>
     <br>
-  </div>
-  <div class="main">
+    </header>
+<main>
     <center>
-        <h5>Ceci est un des 3 easters-eggs🐰 Indice: code </h5> <br>
         <h2>Mes Manuels & Moi:<br></h2>
-        <br>
-        <h3 class="info" id="uainfo"> </h3>
-        <h3><a target="_blank"  id="ua"> Accès</a>
-          <br>
-          <div id="tuto">
+        <h3 class="info">Votre établissement et votre classe:</h3>
+        
+        <select onchange="saveLycee()" id="lycee" name="lycee">
+            <option id="none" value="none">Choisir un lycée</option>
+            <option id="1-lycee" value="1">Lycée d'état Victor Duruy — Mont de Marsan</option>
+            <option id="2-lycee" value="2">Lycée Test — Test</option>
+        </select>
 
-          </div>
-        </h3>
-        <br>
+        <select onchange="saveClasse()" id="classe" name="classe">
+            <option id="noneclass" value="noneclass">Choisir une classe</option>
+            <option id="0-class" value="0">Terminale</option>
+            <option id="1-class" value="1">Première</option>
+            <option id="2-class" value="2">Seconde</option>
+        </select>
+        <h2 style="text-decoration: underline;">Accès au manuels de votre classe</h2>
+      <br>
+
+     
+    
+  <div id="grid-manuels" class="grid-container">
+    
+</div> 
+<br>
+<a href="assets/mentionslegales.pdf">Mentions Légales & Politique de confidentialité</a>
+</center>
+</main>
 
 
-        <a href="mentionslegales.pdf">Mentions Légales & Politique de confidentialité</a>
+<script>
 
-    </center>
-  </div>
-  <script>
-     if('serviceWorker' in navigator) {
+//Setup service Worker
+if('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('./serviceworker.js')
                     .then((reg) => console.log('Success: ', reg.scope))
                     .catch((err) => console.log('Failure: ', err));
             })
         }
-    const ua = navigator.userAgent
-    
-    if (/android/i.test(ua)) {
-      document.getElementById("ua").innerHTML = "Installation sur Android"; 
-      document.getElementById("tuto").innerHTML = '<br><iframe width="300" height="600" src="https://www.youtube.com/embed/eEDcqIyQRPg" title="Installation de l application sur Android | MesManuels&Moi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
-       }
-    else if (/iPad|iPhone|iPod/.test(ua)){
-    document.getElementById("ua").innerHTML = "Installation sur iOS";
-     document.getElementById("tuto").innerHTML = '<br><iframe width="300" height="600" src="https://www.youtube.com/embed/xTGZvByRDeI" title="Installation de MesManuels&Moi sur iOS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
-        }else{
 
-    document.getElementById("ua").innerHTML = "Accès aux manuels";
-    
-    document.getElementById("uainfo").innerHTML = "Malheurement vu que l'application pour PC n'existe pas encore, vous allez être redirigé vers une page web vous permettant d'utiliser tout de même l'application.";
-       $("a").attr("href", "https://mesmanuelsetmoi.tech/pwa.html");
-  }
-    /**
-    if (/android/i.test(ua)) {
-    document.getElementById("app").innerHTML = "Installation sur Android";
-    }
-    else if (/iPad|iPhone|iPod/.test(ua)){
+    //Verifie si le navigateur supporte le stockage local
+    if(window.localStorage){
+        console.log("Stockage supporté ;-)")
+      }else{
+        console.log("Stockage non supporté :-(")
+      }
       
-    document.getElementById("app").innerHTML = "Installation sur iOS";
-      document.getElementById("app").setAttribute ("href", "ios.mp4");
-    }else{
-      document.getElementById("app").innerHTML = "Accès PC";
-      document.getElementById("app").setAttribute ("href", "pwa.html");}
-  
-  
-**/
-  </script>
+      const div = document.querySelector("#grid-manuels");
+
+      console.log("Lycée: "+localStorage.getItem("lycee"));
+        console.log("Classe: "+localStorage.getItem("classe"));
+      if(localStorage.getItem("lycee") == null){
+        
+        div.innerHTML = "Vous n'avez pas sélectionner de lycée"
+      }else if(localStorage.getItem("lycee") == "none"){
+        div.innerHTML = "Vous n'avez pas sélectionner de classe"
+      }else if(localStorage.getItem("classe") == null){
+        div.innerHTML = "Vous n'avez pas sélectionner de classe"
+      }else if(localStorage.getItem("classe") == "noneclass"){
+        div.innerHTML = "Vous n'avez pas sélectionner de classe"
+      }else{
+        
+      fetch("manuels.json")
+          .then(res => res.json())
+          .then(data => {
+            
+            const manuels = data[localStorage.getItem("lycee")][localStorage.getItem("classe")]["manuels"];
+            if(manuels.length == 0){
+        div.innerHTML = "Vous n'avez pas de manuels ajoutés à votre classe"
+            
+            }else{
+          
+          for (let i = 0; i < manuels.length; i++) {
+                   div.innerHTML += `
+                   
+             <div class="grid-item">
+                 ${manuels[i].name}
+                 <br>
+                 <br>
+                 <img style="width: 260px;" src="${manuels[i].image}" alt="" srcset="">
+                 <br>
+                 <a target="_blank" href="${manuels[i].link}">Accéder au manuel</a>
+             </div>
+                   `;
+          }
+      
+        }
+            }
+            )}
+      
+      ////////////LYCEE/////////////////////
+      //Renvoie si le navigateur à une entrée "lycee" dans le stockage local
+      
+      
+      if(localStorage.getItem("lycee") == "none"){
+          //sinon on affiche un message et on met le select sur "none"
+          console.log("Pas de lycée enregistré");
+            document.getElementById("none").setAttribute("selected", "selected");
+       
+      }else{
+          
+          if(localStorage.getItem("lycee") != null) {
+              //Si oui, on récupère l'entrée et on la met dans le select
+              console.log("Lycee trouvé");
+              document.getElementById(localStorage.getItem("lycee")+"-lycee").setAttribute("selected", "selected");
+           
+          }else{
+              //sinon on affiche un message et on met le select sur "none"
+              console.log("Pas de lycée enregistré");
+                document.getElementById("none").setAttribute("selected", "selected");
+                
+          }
+        }
+      
+      
+      
+      ////////////CLASSE/////////////////////
+      //Renvoie si le navigateur à une entrée "classe" dans le stockage local
+      
+      if (localStorage.getItem("classe") === "noneclass") {
+          //sinon on affiche un message et on met le select sur "none"
+          console.log("Pas de classe trouvé");
+          document.getElementById("noneclass").setAttribute("selected", "selected");
+       
+      }else{
+      if (localStorage.getItem("classe") != null) {
+          
+        //Si oui, on récupère l'entrée et on la met dans le select
+        document.getElementById(localStorage.getItem("classe")+"-class").setAttribute("selected", "selected");
+        console.log("Classe  trouvé");
+      }else{
+          
+        //Si non on affiche un message
+        console.log("Pas de classe trouvé") 
+        document.getElementById("noneclass").setAttribute("selected", "selected");
+         
+      }}
+      
+      //Fonction qui enregistre le lycée dans le stockage local
+      function saveLycee(){
+        //On récupère la valeur du select
+        var lycee = document.getElementById("lycee").value;
+        //On enregistre la valeur dans le stockage local
+        localStorage.setItem("lycee", lycee);
+        console.log("Lycee enregistré");
+        location.reload();
+      }
+      
+      //Fonction qui enregistre la classe dans le stockage local
+      function saveClasse(){
+        //On récupère la valeur du select
+        var classe = document.getElementById("classe").value;
+        //On enregistre la valeur dans le stockage local
+        localStorage.setItem("classe", classe);
+        console.log("Classe enregistré");
+        location.reload();
+      }</script>
 </body>
 </html>

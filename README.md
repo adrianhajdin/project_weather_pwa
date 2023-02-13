@@ -1,14 +1,6 @@
-# Weather Progressive Web Application
-![Weather Data](https://i.imgur.com/3csowzj.png)
+# MesManuels&Moi
+![github](https://user-images.githubusercontent.com/61412853/218373141-e07af1c2-d0eb-44d6-adf5-c59ca856de46.png)
+)
 
-### [Live Site](https://inspiring-bhaskara-d21f88.netlify.app)
+### [Site](https://pwa.mdev-network.fr)
 
-## Introduction
-This is a code repository for the corresponding video tutorial. 
-
-In this video, we will create a PWA. We're going to use React with service workers.
-
-By the end of this video, you will have a strong understanding of what PWA is and how you can build, deploy and publish it.
-
-Setup:
-- run ```npm i && npm start``` for both client and server side to start the development server
