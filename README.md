@@ -4,5 +4,10 @@
 
 ### [Accès à la dernière version](https://pwa.mdev-network.fr)
 
-##Introduction
+## Introduction
 C'est une version dite 'béta' afin de tester la PWA sous forme de React
+
+
+## Crédits
+|| Nom || GitHub||
+|| Maxence Lebrun || ![@MaxenceLebrunDEV](https://github.com/MaxenceLebrunDEV) ||
