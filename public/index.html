@@ -105,7 +105,7 @@ if('serviceWorker' in navigator) {
         div.innerHTML = "Vous n'avez pas sélectionner de classe"
       }else{
         
-      fetch("manuels.json")
+      fetch("assets/manuels.json")
           .then(res => res.json())
           .then(data => {
             
